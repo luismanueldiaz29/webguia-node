@@ -1,0 +1,28 @@
+<app-nav-bar-home></app-nav-bar-home>
+
+<div class="container">
+  <div class="card">
+    <div class="card-heard">
+      <div class="card-panel bg-danger border rounded mb-4">
+        <h4 class="text-center p-3 text-white">List sites</h4>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let site of sites;">
+          <div class="card mb-4">
+            <img src={{Url}}{{site.nameImg}} alt={{site.nameImg}}>
+            <div class="card-body">
+              <h5 class="card-title text-center">{{site.name}}</h5>
+              <h6>Descripción</h6>
+              <p class="card-text">{{site.description}}</p>
+              <h6>Información de interes:</h6>
+              <p>{{site.infoInterest}}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
